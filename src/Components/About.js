@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function About() {
+export default function About(props) {
 
     const [myStyle, setMyStyle] = useState({
         color: 'black',
@@ -18,6 +18,7 @@ export default function About() {
                     border: '1px solid white'
             })
             setBtnText("Enable light mode")
+            props.showAlert("Enabled dark mode!", "success");
         }
         else {
             setMyStyle({
@@ -25,6 +26,7 @@ export default function About() {
                 backgroundColor: 'white'
             })
             setBtnText("Enable dark mode")
+            props.showAlert("Enabled light mode!", "success");
         }
     }
 
@@ -70,7 +72,7 @@ export default function About() {
                 </div>
             </div>
             <div className='container my-3'>
-                <button onClick={toggleStyle} type="button" className="btn btn-primary">{btntext}</button>
+                <button onClick={toggleStyle} type="button" className="btn btn-primary my-2">{btntext}</button>
             </div>
         </div>
     )

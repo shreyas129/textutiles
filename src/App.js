@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
-import TextForm from './Components/TextForm';
-// import About from './Components/About';
+// import TextForm from './Components/TextForm';
+import About from './Components/About';
 import Alert from './Components/Alert';
 
 function App() {
@@ -23,12 +23,20 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "success");
+      // document.title = 'TextUtiles - Dark Mode';
     }
 
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
+      // document.title = 'TextUtiles - Light Mode';
+      // setInterval(() => {
+      //   document.title = 'TextUtiles is Amazing!';
+      // }, 2000);
+      // setInterval(() => {
+      //   document.title = 'Install TextUtiles now!';
+      // }, 1500);
     }
   }
 
@@ -37,8 +45,8 @@ function App() {
       <Navbar title="TextUtiles" aboutText="about TextUtiles" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-        {/* <About/> */}
+        {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} /> */}
+        <About showAlert={showAlert} />
       </div>
     </>
   );
