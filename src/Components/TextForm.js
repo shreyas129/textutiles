@@ -56,7 +56,7 @@ export default function TextForm(props) {
     }
 
     const [text, setText] = useState('');
-    // text = "new text"; // Wrong way to change text
+    // text = "new text"; // Wrong way to change text 
     // setText("new text"); // Correct way to change text
     return (
         <>
@@ -65,11 +65,11 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : '#042743' }} id="myBox" rows="8"></textarea>
                 </div>
-                <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to Lowercase</button>
-                <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear text</button>
-                <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy text</button>
-                <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra spaces</button>
+                <button className="btn btn-primary mx-1"/* add my-1 class in media cases only */ onClick={handleUpClick}>Convert to Uppercase</button>
+                <button className="btn btn-primary mx-1"/* add my-1 class in media cases only */ onClick={handleLoClick}>Convert to Lowercase</button>
+                <button className="btn btn-primary mx-1"/* add my-1 class in media cases only */ onClick={handleClearClick}>Clear text</button>
+                <button className="btn btn-primary mx-1"/* add my-1 class in media cases only */ onClick={handleCopy}>Copy text</button>
+                <button className="btn btn-primary mx-1"/* add my-1 class in media cases only */ onClick={handleExtraSpaces}>Remove Extra spaces</button>
             </div>
             <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
                 <h2>Your text summary</h2>
