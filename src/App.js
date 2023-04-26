@@ -5,7 +5,7 @@ import TextForm from './Components/TextForm';
 import About from './Components/About';
 import Alert from './Components/Alert';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Navbar title="TextUtiles" aboutText="about us" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
@@ -56,7 +56,7 @@ function App() {
             <Route path="/" element={<TextForm heading="Enter the text to analyze below" onShowAlert={showAlert} />} />
           </Routes>
         </div>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }

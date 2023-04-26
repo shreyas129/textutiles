@@ -36,7 +36,7 @@ export default function TextForm(props) {
     const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
-        props.showAlert("Cleared all the extra spaces tha was in the textbox!", "success") 
+        props.showAlert("Cleared all the extra spaces tha was in the textbox!", "success")
     }
 
     const handleOnChange = (event) => {
@@ -46,13 +46,13 @@ export default function TextForm(props) {
 
     const noOfWord = (sentence) => {
         const words = sentence.split(" ");
-        let i = 0 ; 
-        words.forEach((word)=>{
-            if (word.length >0){
-                i++; 
+        let i = 0;
+        words.forEach((word) => {
+            if (word.length > 0) {
+                i++;
             }
         })
-        return i; 
+        return i;
     }
 
     const [text, setText] = useState('');
@@ -76,7 +76,7 @@ export default function TextForm(props) {
                 <p>{noOfWord(text)} words and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} Minutes read</p>
                 <h2>Preview</h2>
-                <p>{text.length > 0 ? text:"Enter something in the textbox above to preview it here"}</p>
+                <p>{text.length > 0 ? text : "Enter something in the textbox above to preview it here"}</p>
             </div>
         </>
     )
