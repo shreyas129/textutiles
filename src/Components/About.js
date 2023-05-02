@@ -72,7 +72,7 @@ export default function About(props) {
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className="accordion-body" style={myStyle}>
                             <strong>There are two types of dark mode in this application.</strong>There are two types of dark mode -
-                            <strong>1.</strong>Dark mode
+                            <strong>1.</strong>Dark mode                                                                                                                            
                             <strong>2.</strong>Dark mode +
                             The 'Dark mode' is default dark mode and the 'Dark mode +' is expert dark mode that is in the bottom, So click it the you will see quiet neat Enjoy it
                         </div>
