@@ -52,7 +52,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route path="/about" element={<About showAlert={showAlert}  />} />
+            <Route path="/about" element={<About showAlert={showAlert} btnText="Enable dark mode +"  />} />
             <Route path="/" element={<TextForm heading="Enter the text to analyze below" onShowAlert={showAlert} />} />
           </Routes>
         </div>
