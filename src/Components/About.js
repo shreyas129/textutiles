@@ -78,7 +78,7 @@ export default function About(props) {
                 </div>
             </div>
             <div className='container my-3'>
-                <button exact onClick={toggleStyle} type="button" className="btn btn-primary my-2">{btntext}</button>
+                {/* <button exact onClick={toggleStyle} type="button" className="btn btn-primary my-2">{btntext}</button> */}
             </div>
         </div>
     )
