@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 export default function TextForm(props) {
     const handleUpClick = () => {
-        if (text.length === 0) {
+        if (text.length() === 0) {
             props.showAlert("There's nothing in the text box to change the text to uppercase", "danger")
         }
 
@@ -17,7 +17,7 @@ export default function TextForm(props) {
     }
 
     const handleLoClick = () => {
-        if (text.length === 0) {
+        if (text.length() === 0) {
             props.showAlert("There's nothing in the text box to change the text to lowercase", "danger")
         }
         
@@ -30,7 +30,7 @@ export default function TextForm(props) {
     }
 
     const handleClearClick = () => {
-        if (text.length === 0) {
+        if (text.length() === 0) {
             props.showAlert("There's nothing in the text box to clear the text", "danger")
         }
         
@@ -43,7 +43,7 @@ export default function TextForm(props) {
     }
 
     const handleCopy = () => {
-        if(text.length === 0){
+        if(text.length() === 0){
             props.showAlert("There's nothing in the text box to copy the text", "danger")
         }
         
@@ -58,7 +58,7 @@ export default function TextForm(props) {
     }
 
     function handleExtraSpaces() {
-        if (text.length === 0) {
+        if (text.length() === 0) {
             props.showAlert("There's nothing in the text box to clear the extra spaces", "danger");
         }
 
@@ -98,7 +98,7 @@ return (
             <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
             <button className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear text</button>
             <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
-            {/* <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy text</button> */}
+            <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy text</button>
             <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra spaces</button>
         </div>
         <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
