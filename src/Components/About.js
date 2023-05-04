@@ -13,13 +13,13 @@ export default function About(props) {
         backgroundColor: props.mode === 'dark' ? '#042743' : 'white',
     }
 
-    const [btntext, setBtnText] = useState("Enable dark mode")
+    const [btntext, setBtnText] = useState("Enable dark mode+")
 
     const toggleStyle = () => {
-        if (myStyle.color === 'black') {
+        if (myStyle.color === '#042743') {
             myStyle({
                 color: 'white',
-                backgroundColor: 'black',
+                backgroundColor: '#042743',
                 border: '1px solid white'
             })
             setBtnText("Enable light mode")
@@ -72,15 +72,13 @@ export default function About(props) {
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className="accordion-body" style={myStyle}>
                             <strong>There are two types of dark mode in this application.</strong>There are two types of dark mode -
-                            <strong>1.</strong>Dark mode                                                                                                                            
-                            <strong>2.</strong>Dark mode +
-                            The 'Dark mode' is default dark mode and the 'Dark mode +' is expert dark mode that is in the bottom, So click it the you will see quiet neat Enjoy it
+                            <strong>1.</strong>'Dark Mode' <spacer/><strong>2.</strong>'Dark mode +' The 'Dark mode' is default dark mode and the 'Dark mode +' is expert dark mode that is in the bottom, So click it the you will see quiet neat Enjoy it
                         </div>
                     </div>
                 </div>
             </div>
             <div className='container my-3'>
-                <button onClick={toggleStyle} type="button" className="btn btn-primary my-2">{btntext}</button>
+                <button exact onClick={toggleStyle} type="button" className="btn btn-primary my-2">{btntext}</button>
             </div>
         </div>
     )
