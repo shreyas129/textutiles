@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 export default function TextForm(props) {
     const handleUpClick = () => {
         if (text.length === 0) {
-            props.showAlert("There's nothing in the text box to change the text to uppercase", "failed")
+            props.showAlert("There's nothing in the text box to change the text to uppercase", "Danger")
         }
 
         else{
@@ -18,7 +18,7 @@ export default function TextForm(props) {
 
     const handleLoClick = () => {
         if (text.length === 0) {
-            props.showAlert("There's nothing in the text box to change the text to lowercase", "failed")
+            props.showAlert("There's nothing in the text box to change the text to lowercase", "Danger")
         }
         
         else {
@@ -31,7 +31,7 @@ export default function TextForm(props) {
 
     const handleClearClick = () => {
         if (text.length === 0) {
-            props.showAlert("There's nothing in the text box to clear the text", "failed")
+            props.showAlert("There's nothing in the text box to clear the text", "Danger")
         }
         
         else {
@@ -44,7 +44,7 @@ export default function TextForm(props) {
 
     const handleCopy = () => {
         if(text.length === 0){
-            props.showAlert("There's nothing in the text box to copy the text", "failed")
+            props.showAlert("There's nothing in the text box to copy the text", "Danger")
         }
         
         else {
@@ -59,10 +59,10 @@ export default function TextForm(props) {
 
     const handleExtraSpaces = () => {
         if(text.length === 0){
-            props.showAlert("There's nothing in the text box to clear the extra spaces", "failed")
+            props.showAlert("There's nothing in the text box to clear the extra spaces", "Danger")
         }
 
-        else {
+        else {danger
               let newText = text.split(/[ ]+/);
               setText(newText.join(" "))
               props.showAlert("Cleared all the extra spaces that was in the textbox!", "success")
