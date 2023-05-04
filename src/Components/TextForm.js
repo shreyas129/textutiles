@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 export default function TextForm(props) {
     const handleUpClick = () => {
         if (text.length === 0) {
-            props.showAlert("There's nothing in the text box to change the text to uppercase", "Danger")
+            props.showAlert("There's nothing in the text box to change the text to uppercase", "danger")
         }
 
         else{
@@ -18,7 +18,7 @@ export default function TextForm(props) {
 
     const handleLoClick = () => {
         if (text.length === 0) {
-            props.showAlert("There's nothing in the text box to change the text to lowercase", "Danger")
+            props.showAlert("There's nothing in the text box to change the text to lowercase", "danger")
         }
         
         else {
@@ -31,7 +31,7 @@ export default function TextForm(props) {
 
     const handleClearClick = () => {
         if (text.length === 0) {
-            props.showAlert("There's nothing in the text box to clear the text", "Danger")
+            props.showAlert("There's nothing in the text box to clear the text", "danger")
         }
         
         else {
@@ -44,7 +44,7 @@ export default function TextForm(props) {
 
     const handleCopy = () => {
         if(text.length === 0){
-            props.showAlert("There's nothing in the text box to copy the text", "Danger")
+            props.showAlert("There's nothing in the text box to copy the text", "danger")
         }
         
         else {
@@ -57,15 +57,15 @@ export default function TextForm(props) {
         }
     }
 
-    const handleExtraSpaces = () => {
-        if(text.length === 0){
-            props.showAlert("There's nothing in the text box to clear the extra spaces", "Danger")
+    function handleExtraSpaces() {
+        if (text.length === 0) {
+            props.showAlert("There's nothing in the text box to clear the extra spaces", "danger");
         }
 
-        else {danger
-              let newText = text.split(/[ ]+/);
-              setText(newText.join(" "))
-              props.showAlert("Cleared all the extra spaces that was in the textbox!", "success")
+        else {
+            let newText = text.split(/[ ]+/);
+            setText(newText.join(" "));
+            props.showAlert("Cleared all the extra spaces that was in the textbox!", "success");
         }
     }
 
